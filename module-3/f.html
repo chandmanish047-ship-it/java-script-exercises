@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dice Roller</title>
+    </head>
+    <body>
+        <h1>dice rolling</h1>
+        <ul id="dice-results"></ul>
+        <script>
+            function rolldice(){
+                return Math.floor(Math.random()*6)+1
+            }
+            const listElement=document.getElementById("dice-results")
+            let result
+            do{
+                result=rolldice();
+                const listItem=document.createElement("li");
+                listItem.textContent=`Rolled:${result}`
+            }while(result!=6)
+        </script>
+    </body>
+</html>

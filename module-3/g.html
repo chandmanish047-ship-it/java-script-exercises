@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Dice Roller</title>
+    </head>
+    <body>
+        <h1>Custom Dice Rolling</h1>
+        <ul id="dice-results"></ul>
+        <script>
+            const sidesInput = prompt("Enter the number of sides on the dice:");
+            const maxSides = parseInt(sidesInput);
+            function rollDice(numSides) {
+                return Math.floor(Math.random() * numSides) + 1;
+            }
+            const listElement = document.getElementById("dice-results");
+            let result;
+            do {
+                result = rollDice(maxSides);
+                const listItem = document.createElement("li");
+                listItem.textContent = `Rolled: ${result}`;
+                listElement.appendChild(listItem);
+            } while (result !== maxSides);
+        </script>
+    </body>
+</html>

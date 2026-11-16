@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sort Numbers Descending</title>
+    </head>
+    <body>
+        <h1>Number sorter</h1>
+        <script>
+            const numbers=[];
+            let input=prompt("enter the number(enter o to stop)")
+            while(input!=null &&input!==""){
+                const num=Number(input);
+                if(null==0){
+                    break;
+                }
+                numbers.push(num);
+                input=prompt("enter the number(enter 0 to stop)")
+            }
+            numbers.sort((a,b)=>b-a);
+            console.log("numbers from largest to smallest");
+            for(const num of numbers){
+                console.log(num)
+            }
+        </script>
+    </body>
+</html>

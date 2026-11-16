@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dognames</title>
+    </head>
+    <body>
+        <h1>dog-names</h1>
+        <ul id="dog-list"></ul>
+        <script>
+            const dogs=[]
+            for(let i=0;i<=6;i++){
+                const name=prompt("enter the dog's name:")
+                dogs.push(name)
+            }
+            dogs.sort()
+            dogs.reverse()
+            const listElement=document.getElementById("dog-list")
+            for(const dog of dogs){
+                const listItem=document.createElement("li")
+                listItem.textContent=dogs;
+                listElement.appendChild(listItem)
+            }
+        </script>
+    </body>
+</html>

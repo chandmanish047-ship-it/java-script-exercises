@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Participants List</title>
+    </head>
+    <body>
+        <h1>Participants List</h1>
+        <ol id="participants-list"></ol>
+        <script>
+            const count=parseInt(prompt("enter the number of participants:"))
+            const participants=[];
+            for(let i=0;i<=count;i++){
+                const name=prompt("enter the pariticipant's name:")
+                participants.push(name)
+            }
+            participants.sort()
+            const listElement=document.getElementById("participants-list")
+            for(const participant of participants){
+                const listItem=document.createElement("Li");
+                listItem.textContent=participant
+                listElement.appendChild(listItem)
+            }
+        </script>
+    </body>
+</html>

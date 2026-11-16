@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Concatenation</title>
+</head>
+<body>
+    <h1>Concatenated Result</h1>
+    <p id="output"></p>
+    <script>
+        const bandMembers = ["Johnny", "DeeDee", "Joey", "Marky"];
+        function concat(arr) {
+            let result = "";
+            for (let i = 0; i < arr.length; i++) {
+                result += arr[i];
+            }
+            return result;
+        }
+        const combinedString = concat(bandMembers);
+        document.getElementById("output").textContent = combinedString;
+    </script>
+</body>
+</html>
